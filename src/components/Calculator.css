@@ -9,14 +9,8 @@
   border: solid black 1px;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 224, 250, 0.61);
+  background-color: rgb(255, 224, 250);
 }
-
-button{
-  margin:5px;
-  padding:10px;
-}
-
 .display {
   background-color: gainsboro;
   width:250px;
@@ -24,7 +18,23 @@ button{
   margin: 10px;
   text-align: center;
 }
+.buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:5px;
+  padding:10px;
+}
 
+.math-buttons-box{
+display: flex;
+flex-direction: column;
+}
+.math-buttons{
+margin: 10px;
+padding: 10px;
+border: black solid 2px;
+}
 .numbers-buttons {
   width: 250px;
   /* height: max-content; */

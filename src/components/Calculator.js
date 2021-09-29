@@ -11,7 +11,7 @@ function Calculator() {
   const clickNumber = (n) => {
     resultArr.push(`${n}`)
     console.log(resultArr)
-    isStart? setDisplay(n) : setDisplay(display+n);
+    isStart ? setDisplay(n) : setDisplay(display + n);
     setIsStart(false);
   }
 
@@ -47,20 +47,23 @@ function Calculator() {
   return (
     <div className='calculator'>
       <div className='display'>{display}</div>
-      <div className='math-buttons'>
-        <button onClick={clear}>clear</button>
-        <button onClick={plus}>+</button>
-        <button onClick={minus}>-</button>
-        <button onClick={devide}>/</button>
-        <button onClick={multiply}>*</button>
-        <button onClick={equal}>=</button>
+      <div className='buttons'>
+        <div className='math-buttons-box'>
+          <div onClick={clear} className='math-buttons'>clear</div>
+          <div onClick={plus} className='math-buttons'>+</div>
+          <div onClick={minus} className='math-buttons'>-</div>
+          <div onClick={devide} className='math-buttons'>/</div>
+          <div onClick={multiply} className='math-buttons'>*</div>
+          <div onClick={equal} className='math-buttons'>=</div>
+        </div>
+
+        <div className='numbers-buttons'>
+          {numbers.map((number, index) => {
+            return <div className='number' key={index} onClick={() => clickNumber(number)}>{number}</div>
+          })}
+        </div>
       </div>
 
-      <div className='numbers-buttons'>
-        {numbers.map((number, index) => {
-          return <div className='number' key={index} onClick={() => clickNumber(number)}>{number}</div>
-        })}
-      </div>
 
     </div>
   )
