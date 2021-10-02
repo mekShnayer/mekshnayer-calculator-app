@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './Calculator.css';
 
 function Calculator() {
@@ -14,12 +14,10 @@ function Calculator() {
     isStart ? setDisplay(n) : setDisplay(display + n);
     setIsStart(false);
   }
-
   const plus = () => {
     resultArr.push('+')
     setDisplay('')
   }
-
   const clear = () => {
     setResultArr([])
     console.log(resultArr)
@@ -44,6 +42,44 @@ function Calculator() {
     setResultArr([])
     setIsStart(true)
   }
+
+  const handleKeyPress = event => {
+    const { key, keyCode } = event;
+
+    if (95 < keyCode && keyCode < 106) {
+      clickNumber(key);
+    } else {
+      switch (keyCode) {
+        case 106:
+          multiply();
+          break;
+        case 107:
+          plus();
+          break;
+        case 109:
+          minus();
+          break;
+        case 111:
+          devide();
+          break;
+        case 13:
+          equal();
+          break;
+      }
+    }
+
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  });
+
+
+
   return (
     <div className='calculator'>
       <div className='display'>{display}</div>
