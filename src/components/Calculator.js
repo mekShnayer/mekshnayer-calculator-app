@@ -47,6 +47,7 @@ function Calculator() {
   return (
     <div className='calculator'>
       <div className='display'>{display}</div>
+      <div className='full-expression-display'>{`expression: ${resultArr.join('')}`}</div>
       <div className='buttons'>
         <div className='math-buttons-box'>
           <div onClick={clear} className='math-buttons'>clear</div>

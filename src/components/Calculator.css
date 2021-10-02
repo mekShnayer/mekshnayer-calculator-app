@@ -11,39 +11,46 @@
   align-items: center;
   background-color: rgb(255, 224, 250);
   border-radius: 10px;
-
 }
+
 .display {
   background-color: gainsboro;
-  width:300px;
+  width: 300px;
   height: 40px;
   margin: 10px;
   text-align: center;
   border-radius: 10px;
 }
-.buttons{
+
+.full-expression-display {
+  opacity: 0.5;
+  font-weight: lighter;
+  display: flex;
+  width: -webkit-fill-available;
+}
+
+.buttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin:5px;
-  padding:10px;
+  margin: 5px;
+  padding: 10px;
   border-radius: 10px;
-
 }
 
-.math-buttons-box{
-display: flex;
-flex-direction: column;
-/* border-radius: 10px; */
-
+.math-buttons-box {
+  display: flex;
+  flex-direction: column;
+  /* border-radius: 10px; */
 }
-.math-buttons{
-margin: 10px;
-padding: 10px;
-border: black solid 2px;
-border-radius: 10px;
 
+.math-buttons {
+  margin: 10px;
+  padding: 10px;
+  border: black solid 2px;
+  border-radius: 10px;
 }
+
 .numbers-buttons {
   width: 250px;
   /* height: max-content; */
