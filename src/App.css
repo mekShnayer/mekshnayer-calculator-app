@@ -44,4 +44,5 @@
   position: absolute;
   background-image: url('./background.jpg');
   font-weight: bold;
+  display: flex;
 }
