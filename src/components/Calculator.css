@@ -1,10 +1,12 @@
 .calculator {
   margin: auto;
   position: relative;
-  margin-top: 15%;
+  /* margin-top: auto; */
   width: fit-content;
   padding: 10px;
   display: flex;
+  /* align-self: center; */
+  justify-self: center;
   flex-direction: column;
   border: solid black 1px;
   justify-content: center;
